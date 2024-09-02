@@ -8,6 +8,9 @@ import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import ErrorBoundary from './src/errorBoundarys/ErrorBoundary';
+import Login from './src/component/login/Login';
+import Article from './src/component/article/Article';
 
 const Tab = createBottomTabNavigator();
 function App() {
@@ -15,16 +18,21 @@ function App() {
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    flex:1
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <ErrorBoundary>
+      <SafeAreaView style={backgroundStyle}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-     
+      <Login/>
+     {/* <Article/> */}
     </SafeAreaView>
+    </ErrorBoundary>
+    
   );
 }
 
