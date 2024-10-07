@@ -1,11 +1,12 @@
-import {View, Text, TextInput} from 'react-native';
-import React, {useState} from 'react';
+import { View, Text, TextInput } from 'react-native';
+import React, { useState } from 'react';
 import styles from './style';
 import Colors from '../../utilities/Color';
 
 const CustomInputText = ({
   label = 'label',
   maxLength = 9,
+  showLabel = true,
   keyboardType = null,
   placeholder = 'placeholder',
   ...props
@@ -21,7 +22,7 @@ const CustomInputText = ({
   return (
     <View>
       <View style={styles.mainContainer}>
-        <Text style={styles.label}>{label}</Text>
+        {showLabel && label ? <Text style={styles.label}>{label}</Text> : null}
       </View>
       <View style={styles.inputMainContainer}>
         <TextInput

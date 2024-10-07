@@ -1,10 +1,11 @@
-import { StyleSheet } from "react-native";
-import { margin, padding } from "../../utilities/Style";
-import Colors from "../../utilities/Color";
+import { StyleSheet } from 'react-native';
+import Colors from '../../utilities/Color';
+import { padding } from '../../utilities/Style';
 
 const style = StyleSheet.create({
-    logoContainer: {
-        alignItems: 'center'
+    screen: {
+        flex: 1,
+        backgroundColor: Colors.WHITE
     },
     welcomeContainer: {
         alignItems: 'center',
@@ -16,31 +17,21 @@ const style = StyleSheet.create({
         fontWeight: '700',
         color: Colors.V2_Text
     },
-    loginScreen: {
-        flex: 1,
-        backgroundColor: Colors.WHITE,
-    },
     loginScreen1: {
-        flex: 1,
+        marginTop: 60,
         justifyContent: 'center',
         alignItems: 'center'
     },
     inputSection: {
-        ...padding('2.5%')
-    },
-    forgetPasswordRow: {
-        flexDirection: 'row',
-        width: '95%',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        ...padding('1.5 %', '2.5%', '0%', '2.5%',)
+        ...padding('2.5%'),
+        marginTop: 20
     },
     bottomSection: {
         ...padding('2.5%', '2.5%', '0%', '2.5%'),
-        marginTop: 30
+        width: '100%'
     },
     signUpSection: {
-        marginBottom: '6.5%',
+        marginTop: 20,
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
@@ -49,5 +40,5 @@ const style = StyleSheet.create({
         color: Colors.GRAY_TEXT,
         fontSize: 14
     },
-})
+});
 export default style;

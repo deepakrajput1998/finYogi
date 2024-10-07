@@ -1,9 +1,10 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import Colors from '../../utilities/Color';
+import { padding } from '../../utilities/Style';
 
 const styles = StyleSheet.create({
-  mainContainer: {width: '95%', margin: '2.5%'},
-  label: {fontSize: 17, fontWeight: '400', color: Colors.GRAY_TEXT},
+  mainContainer: { width: '95%', margin: '2.5%' },
+  label: { fontSize: 16, fontWeight: '400', color: Colors.GRAY_TEXT },
   inputMainContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
   inputContainer: {
     width: '100%',
     padding: '2.5%',
-    fontSize: 17,
+    fontSize: 14,
     color: Colors.V2_Text,
   },
 });

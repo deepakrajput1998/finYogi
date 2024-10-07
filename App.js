@@ -11,6 +11,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import ErrorBoundary from './src/errorBoundarys/ErrorBoundary';
 import Login from './src/component/login/Login';
 import Article from './src/component/article/Article';
+import Registration from './src/component/registration/Registration';
 
 const Tab = createBottomTabNavigator();
 function App() {
@@ -18,21 +19,22 @@ function App() {
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-    flex:1
+    flex: 1
   };
 
   return (
     <ErrorBoundary>
       <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <Login/>
-     {/* <Article/> */}
-    </SafeAreaView>
+        <StatusBar
+          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+          backgroundColor={backgroundStyle.backgroundColor}
+        />
+        {/* <Login/> */}
+        <Registration />
+        {/* <Article /> */}
+      </SafeAreaView>
     </ErrorBoundary>
-    
+
   );
 }
 

@@ -1,14 +1,14 @@
-import {View, Text, TouchableOpacity} from 'react-native';
-import React, {useState} from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
 import Colors from '../../utilities/Color';
 import styles from './style';
 const LinkButton = ({
   label = 'label',
   type,
   disabled = false,
-  onPress = () => {},
+  onPress = () => { },
   isUnderline = false,
-  fontSize = 17,
+  fontSize = 14,
 }) => {
   const [value, setValue] = useState(null);
   const enumValues = ['FY', 'default', 'success', 'danger'];
@@ -37,14 +37,14 @@ const LinkButton = ({
       onPress={() => {
         onButtonPressHandler();
       }}
-      style={styles.linkButtonContainer}>
+    >
       <Text
         style={[
           !disabled ? styles.labelActive : styles.labelUnActive,
           {
             color: linkTextColor,
             textDecorationLine: isUnderline ? 'underline' : 'none',
-            fontSize:fontSize,
+            fontSize: fontSize,
           },
         ]}>
         {label}

@@ -1,17 +1,19 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 import Colors from '../../utilities/Color';
+import { padding } from '../../utilities/Style';
 
 const styles = StyleSheet.create({
   checkboxContainer: {
     width: '95%',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
     alignItems: 'center',
-    margin:'2.5%'
+    margin: '2.5%',
+    ...padding('0.5%')
   },
   checkboxChecked: {
-    width: 24,
-    height: 24,
+    width: 22,
+    height: 22,
     borderRadius: 4,
     borderWidth: 2,
     borderColor: Colors.WHITE,
@@ -20,20 +22,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   checkboxCheckedCricular: {
-    width: 24,
-    height: 24,
+    width: 22,
+    height: 22,
     borderRadius: 4,
     borderWidth: 2,
     borderColor: Colors.BLUE1,
     backgroundColor: Colors.BLUE1,
-    marginRight:'2.5%',
+    marginRight: '2.5%',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 50,
   },
   checkboxUnchecked: {
-    width: 24,
-    height: 24,
+    width: 22,
+    height: 22,
     borderRadius: 4,
     borderWidth: 2,
     borderColor: Colors.GRAY1,
@@ -41,8 +43,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   checkboxUncheckedCricular: {
-    width: 24,
-    height: 24,
+    width: 22,
+    height: 22,
     borderRadius: 4,
     borderWidth: 2,
     borderColor: Colors.GRAY_TEXT,
@@ -55,18 +57,18 @@ const styles = StyleSheet.create({
     color: Colors.WHITE,
     fontSize: 14,
   },
-  labelContainer:{
-    width:'85%'
+  labelContainer: {
+    width: '85%'
   },
   labelUnActive: {
-    fontSize: 17,
+    fontSize: 14,
     color: Colors.GRAY_TEXT,
-    fontWeight:'500'
+    fontWeight: '500'
   },
   labelActive: {
-    fontSize: 17,
+    fontSize: 14,
     color: Colors.V2_Text,
-    fontWeight:'500'
+    fontWeight: '500'
   },
 });
 export default styles;
