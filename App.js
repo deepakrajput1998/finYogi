@@ -12,6 +12,9 @@ import ErrorBoundary from './src/errorBoundarys/ErrorBoundary';
 import Login from './src/component/login/Login';
 import Article from './src/component/article/Article';
 import Registration from './src/component/registration/Registration';
+import ForgetPassword from './src/component/forgetPassword/ForgetPassword';
+import OtpScreen from './src/component/otpScreen/OtpScreen';
+
 
 const Tab = createBottomTabNavigator();
 function App() {
@@ -30,8 +33,10 @@ function App() {
           backgroundColor={backgroundStyle.backgroundColor}
         />
         {/* <Login/> */}
-        <Registration />
+        {/* <Registration /> */}
         {/* <Article /> */}
+        {/* <ForgetPassword /> */}
+        <OtpScreen />
       </SafeAreaView>
     </ErrorBoundary>
 
