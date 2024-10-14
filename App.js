@@ -14,6 +14,7 @@ import Article from './src/component/article/Article';
 import Registration from './src/component/registration/Registration';
 import ForgetPassword from './src/component/forgetPassword/ForgetPassword';
 import OtpScreen from './src/component/otpScreen/OtpScreen';
+import CreatePassword from './src/createPasswordScreen/CreatePassword';
 
 
 const Tab = createBottomTabNavigator();
@@ -34,9 +35,10 @@ function App() {
         />
         {/* <Login/> */}
         {/* <Registration /> */}
-        {/* <Article /> */}
+        <Article />
         {/* <ForgetPassword /> */}
-        <OtpScreen />
+        {/* <OtpScreen /> */}
+        {/* <CreatePassword /> */}
       </SafeAreaView>
     </ErrorBoundary>
 
